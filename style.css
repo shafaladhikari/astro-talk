@@ -330,19 +330,7 @@ body {
   flex-direction: column;
   margin-top: 1rem;
 }
-.service .prev {
-  height: 40px;
-  width: 40px;
-  position: relative;
-  top: 190px;
-  left: 100px;
-  cursor: pointer;
-}
-.service .next {
-  height: 40px;
-  width: 40px;
-  cursor: pointer;
-}
+
 .service .head .heading {
   text-transform: uppercase;
   font-size: 30px;
@@ -366,6 +354,8 @@ body {
   justify-content: center;
 }
 .service .cards .card {
+  width: 18rem;
+
   margin: 0.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 15px 20px rgb(0 9 128/4%), 0 7px 18px rgb(0 9 128/5%);
@@ -384,6 +374,46 @@ body {
   height: 120px;
   width: 120px;
   margin: 3rem;
+}
+@media (max-width: 1000px) {
+  .service .cards .card .card-img-top {
+    height: 80px;
+    width: 80px;
+  }
+
+  .service .cards .card {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media (max-width: 840px) {
+  .service .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .service .cards .card .card-img-top {
+    position: relative;
+    top: 2rem;
+  }
+  .card-text {
+    position: relative;
+    bottom: 1.6rem;
+    font-size: 0.5rem;
+  }
+  .service .cards .card {
+    height: 200px;
+    width: 15rem;
+  }
+}
+@media (max-width: 400px) {
+  .service .cards .card {
+    width: 10rem;
+  }
 }
 .message-CEO {
   background: #f0df20;
@@ -426,6 +456,53 @@ body {
   width: 50px;
   margin: 0.2rem;
 }
+@media (max-width: 1250px) {
+  .message-CEO .main img {
+    height: 300px;
+    width: 300px;
+  }
+}
+@media (max-width: 900px) {
+  .message-CEO .main .ceo-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media (max-width: 775px) {
+  .message-CEO .main .message {
+    width: 600px;
+    margin-left: 0.2rem;
+  }
+  .message-CEO .main .message .heading {
+    font-size: 2.5rem;
+  }
+  .message-CEO .main .message .para {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 555px) {
+  .message-CEO .main .message {
+    height: 500px;
+  }
+  .message-CEO .main .message .heading {
+    margin: 0.1rem;
+    font-size: 2rem;
+  }
+  .message-CEO .main .message .para {
+    margin: 0.1rem;
+    font-size: 1rem;
+  }
+  .message-CEO .main .message .social-media img {
+    height: 30px;
+    width: 30px;
+    margin: 0.1rem;
+  }
+  .message-CEO .main .message .name,
+  .message-CEO .main .message .CEO {
+    margin: 0.1rem;
+    font-size: 1rem;
+  }
+}
 .astromall .head {
   display: flex;
   align-items: center;
@@ -450,9 +527,12 @@ body {
   margin-bottom: 10px !important;
   margin-top: 20px !important;
 }
+.astromall .cards .card .card-text {
+  font-size: 1.2rem;
+}
 .astromall .cards .card {
   height: 200px;
-  width: 20px;
+  width: 13rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -476,4 +556,75 @@ body {
 .astromall .cards .card img {
   height: 120px;
   width: 80px;
+}
+@media (max-width: 540px) {
+  .astromall .cards .card {
+    width: 18rem;
+  }
+  .astromall .cards .card .card-text {
+    font-size: 1.5rem;
+  }
+}
+.astromall-news {
+  background-color: #f0df20;
+  margin-top: 2rem;
+}
+.astromall-news .head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+.astromall-news .head .heading {
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 700;
+  position: relative;
+  color: #313131;
+  margin: 1rem;
+  text-align: center;
+}
+.astromall-news .head .sub-heading {
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  display: inline-block;
+  color: #383535;
+  margin-bottom: 10px !important;
+  margin-top: 20px !important;
+  text-align: center;
+}
+.astromall-news .cards .card {
+  margin: 1rem;
+  height: 100px;
+  width: 14rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 4rem;
+  margin-right: 0;
+  margin-top: 1rem;
+  border-radius: 1rem;
+
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+.astromall-news .cards .card .card-text {
+  font-size: 0.8rem;
+  color: #333;
+}
+.astromall-news .cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 540px) {
+  .astromall-news .cards .card {
+    width: 18rem;
+    margin: 1.5rem;
+  }
+  .astromall-news .cards .card .card-text {
+    font-size: 1.2rem;
+  }
 }
